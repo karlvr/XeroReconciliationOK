@@ -5,7 +5,7 @@ A Safari browser extension to automatically click OK buttons for rule matches in
 
 Installation
 ------------
-Install the extension in Safari by downloading the `XeroReconciliationOK.safariextz` file and opening it.
+Install the extension in Safari by downloading the [XeroReconciliationOK.safariextz](https://raw.github.com/karlvr/XeroReconciliationOK/blob/master/XeroReconciliationOK.safariextz) file and opening it.
 You can uninstall it at any time by going to the Preferences in Safari, to the Extensions tab, 
 find and click the *XeroReconciliationOK* extension and click the Uninstall button.
 
