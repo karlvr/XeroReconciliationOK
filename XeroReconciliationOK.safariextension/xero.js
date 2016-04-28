@@ -103,4 +103,13 @@ if (xk72_activate()) {
 	setTimeout(function() {
 		xk72_clickOks(false);
 	}, 100);
+} else {
+	var dest = document.getElementsByClassName('bank-summary')[0];
+	var control = document.createElement('button');
+	control.onclick = function() {
+		location = location + '&pageSize=1337';
+		return false;
+	}
+	control.innerHTML = "Reconcile Rules";
+	dest.appendChild(control);
 }

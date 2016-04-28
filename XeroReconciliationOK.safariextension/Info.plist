@@ -5,7 +5,7 @@
 	<key>Author</key>
 	<string>Karl von Randow</string>
 	<key>Builder Version</key>
-	<string>9537.85.10.17.1</string>
+	<string>11601.5.17.1</string>
 	<key>CFBundleDisplayName</key>
 	<string>XeroReconciliationOK</string>
 	<key>CFBundleIdentifier</key>
@@ -13,11 +13,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
-	<key>Chrome</key>
-	<dict/>
+	<string>1.1</string>
 	<key>Content</key>
 	<dict>
 		<key>Scripts</key>
