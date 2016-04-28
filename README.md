@@ -29,6 +29,11 @@ So please be careful!
 Obviously I accept no responsibility for the correct functioning of this extension, including where
 it doesn’t behave in the way that I describe, so you use it at your own risk!
 
-I’d love to hear how it works for you. I’ve personally used it to reconcile nearly 5000 rule-based 
-transactions so far.
+I’d love to hear how it works for you. I’ve personally used it to reconcile 1000s and 1000s of rule-based 
+transactions and continue to use it every day.
 
+Building
+--------
+In the Develop menu in Safari, open the Extension Builder. Add the `.safariextension` folder to it and then
+click the _Install_ or _Reload_ buttons to test in Safari or the _Build Package..._ button to create the
+`.safariextz` file.
