@@ -9,12 +9,10 @@ Install the extension in Safari by downloading the [XeroReconciliationOK.safarie
 You can uninstall it at any time by going to the Preferences in Safari, to the Extensions tab, 
 find and click the *XeroReconciliationOK* extension and click the Uninstall button.
 
-Once the extension is installed, go to your reconciliation page in Xero. Then click in the location bar
-in Safari and add the following to the end of the URL:
+Once the extension is installed, go to your reconciliation page in Xero. You will see a small
+"Reconile Rules" button near the top of the screen, next to the Statement Balance.
 
-`&pageSize=1337`
-
-That will activate the extension and it will start automatically clicking OK buttons on rules. 
+Click the button to activate the extension and it will start automatically clicking OK buttons on rules. 
 It should not click OK buttons on other types of matches, such as previous matches, or anything 
 that you enter manually. It will periodically reload the page, and may go to the next page. Sometimes 
 it might miss some pages, near the end of a big set, so just find the page where it hasn’t finished 
