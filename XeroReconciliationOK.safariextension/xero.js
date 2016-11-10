@@ -1,3 +1,5 @@
+var initialLoadingsCount;
+
 function xk72_clickOks(aggressive) {
 	console.log("xk72_clickOks: ", aggressive);
 
@@ -10,7 +12,8 @@ function xk72_clickOks(aggressive) {
 
 	if (okayButtonsToClick.length > 0) {
 		console.log("To click", okayButtonsToClick.length, "Loading", loadings.length);
-		if (okayButtonsToClick.length < 5 && loadings.length > 0) {
+		/* There is now always one loading on the screen after Xero changes around 7 November 2016 */
+		if (okayButtonsToClick.length < 5 && loadings.length > initialLoadingsCount) {
 			console.log("Reloading due to too many hung lines");
 			setTimeout(function() {
 				location.reload();
@@ -101,6 +104,7 @@ function xk72_activate() {
 
 if (xk72_activate()) {
 	setTimeout(function() {
+		initialLoadingsCount = document.querySelectorAll('div.statement.load').length;
 		xk72_clickOks(false);
 	}, 100);
 } else {
