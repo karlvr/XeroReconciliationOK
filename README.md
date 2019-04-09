@@ -43,6 +43,9 @@ transactions and continue to use it every day.
 
 Building
 --------
+
+### Safari
+
 In the Develop menu in Safari, open the Extension Builder. Add the `.safariextension` folder to it and then
 click the _Install_ or _Reload_ buttons to test in Safari or the _Build Package..._ button to create the
 `.safariextz` file.
