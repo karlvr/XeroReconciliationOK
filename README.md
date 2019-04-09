@@ -5,9 +5,22 @@ A Safari browser extension to automatically click OK buttons for rule matches in
 
 Installation
 ------------
-Install the extension in Safari by downloading the [XeroReconciliationOK.safariextz](https://raw.github.com/karlvr/XeroReconciliationOK/blob/master/XeroReconciliationOK.safariextz) file and opening it.
+
+Safari
+======
+
+Install the extension in Safari by downloading the [XeroReconciliationOK.safariextz](https://raw.github.com/karlvr/XeroReconciliationOK/blob/master/Safari/XeroReconciliationOK.safariextz) file and opening it.
 You can uninstall it at any time by going to the Preferences in Safari, to the Extensions tab, 
 find and click the *XeroReconciliationOK* extension and click the Uninstall button.
+
+Chrome
+======
+
+Download this repository. Navigate to <a href="chrome://extensions">chrome://extensions</a>, enable <em>Developer mode</em>, click the "Load unpacked"
+button, open the <code>Chrome</code> folder from this repository and choose the <code>XeroReconciliationOK</code> folder.
+
+Usage
+-----
 
 Once the extension is installed, go to your reconciliation page in Xero. You will see a small
 "Reconile Rules" button near the top of the screen, next to the Statement Balance.
