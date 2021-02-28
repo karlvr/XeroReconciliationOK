@@ -28,10 +28,6 @@ function xk72_clickOks(aggressive) {
 		setTimeout(function() {
 			xk72_clickOks(true);
 		}, 1000);
-
-		setTimeout(function() {
-			xk72_loadPage(1);
-		}, 1000 * 30);
 	} else if (allOkayButtons.length > 0) {
 		/* Waiting for some to complete */
 		console.log("Waiting for " + allOkayButtons.length + " buttons to complete");
@@ -58,6 +54,7 @@ function xk72_removeHiddenButtons(buttons) {
 	return result;
 }
 
+/** Returns the current reconciliation page number. */
 function xk72_page() {
 	var search = location.search;
 	var pageIndex = search.indexOf('page=');
@@ -73,6 +70,7 @@ function xk72_page() {
 	}
 }
 
+/** Load a page `delta` on from the current page. */
 function xk72_loadPage(delta) {
 	var page = xk72_page();
 	if (page > 1) {
@@ -97,6 +95,7 @@ function xk72_loadPage(delta) {
 	}
 }
 
+/** Determine whether we should activate on the current page and start clicking OK buttons */
 function xk72_activate() {
 	// return true;
 	return location.search.indexOf("pageSize=1337") !== -1;
@@ -108,6 +107,7 @@ if (xk72_activate()) {
 		xk72_clickOks(false);
 	}, 100);
 } else {
+	/* Add the start button to the page */
 	var dest = document.getElementsByClassName('bank-summary')[0];
 	var control = document.createElement('a');
 	control.className = 'xbtn'
@@ -115,6 +115,6 @@ if (xk72_activate()) {
 		location = location + '&pageSize=1337';
 		return false;
 	}
-	control.innerHTML = "Apply Rules";
+	control.innerHTML = "Apply Rules v1.0.2a";
 	dest.appendChild(control);
 }
