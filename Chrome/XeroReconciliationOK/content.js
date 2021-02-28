@@ -1,7 +1,7 @@
 var initialLoadingsCount;
 
-function xk72_clickOks(aggressive) {
-	console.log("xk72_clickOks: ", aggressive);
+function xk72_clickOks(attempts) {
+	console.log("xk72_clickOks: ", attempts);
 
 	var allOkayButtons = document.querySelectorAll("div.ok a.okayButton");
 	var okayButtonsToClick = document.querySelectorAll("div.ok a.okayButton:not(.disabled):not(.reconciled)");
@@ -26,17 +26,22 @@ function xk72_clickOks(aggressive) {
 		}
 
 		setTimeout(function() {
-			xk72_clickOks(true);
+			xk72_clickOks(1);
 		}, 1000);
 	} else if (allOkayButtons.length > 0) {
 		/* Waiting for some to complete */
 		console.log("Waiting for " + allOkayButtons.length + " buttons to complete");
 		setTimeout(function() {
-			xk72_clickOks(true);
+			xk72_clickOks(1);
 		}, 1000);
-	} else if (aggressive) {
+	} else if (attempts > 10) {
 		console.log("Going to the next page");
 		xk72_loadPage(1);
+	} else if (attempts > 0) {
+		console.log("Sleeping to try again");
+		setTimeout(function() {
+			xk72_clickOks(attempts + 1);
+		}, 1000);
 	} else {
 		console.log("Complete");
 	}
@@ -104,7 +109,7 @@ function xk72_activate() {
 if (xk72_activate()) {
 	setTimeout(function() {
 		initialLoadingsCount = document.querySelectorAll('div.statement.load').length;
-		xk72_clickOks(false);
+		xk72_clickOks(0);
 	}, 100);
 } else {
 	/* Add the start button to the page */
@@ -115,6 +120,6 @@ if (xk72_activate()) {
 		location = location + '&pageSize=1337';
 		return false;
 	}
-	control.innerHTML = "Apply Rules v1.0.2a";
+	control.innerHTML = "Apply Rules v1.0.2e";
 	dest.appendChild(control);
 }
